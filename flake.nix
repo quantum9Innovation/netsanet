@@ -38,7 +38,7 @@
     email = "dev.quantum9innovation@gmail.com";
 
     # Import hardware scan (device-specific)
-    hardware = "./hardware-configuration.nix";
+    hardware = import ./hardware-configuration.nix;
 
     # Internationalization properties
     time.zone = "America/Los_Angeles";
