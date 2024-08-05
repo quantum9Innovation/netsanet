@@ -59,6 +59,7 @@
     homeOverrides = [ ];
 
     # Enforce defaults
+    autoLogin = true;
     ssh = false;
     stateVersion = "24.05";
     kernel = nixpkgs.legacyPackages.x86_64-linux.linuxPackages_zen;
