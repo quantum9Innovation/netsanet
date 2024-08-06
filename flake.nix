@@ -59,13 +59,16 @@
     homeOverrides = [ ];
 
     # Enforce defaults
-    autoLogin = true;
-    ssh = false;
-    stateVersion = "24.05";
+    system = "x86_64-linux";
     kernel = nixpkgs.legacyPackages.x86_64-linux.linuxPackages_zen;
-    audio.jack = false;
+    secureboot.enabled = true;
+    free = false;
+    stateVersion = "24.05";
+    autoLogin = true;
     proxy.enabled = false;
-    hyprland = { };
+    ssh.enabled = false;
+    hyprland.mod = "SUPER";
+    audio.jack = false;
 
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-classic;
   };
