@@ -32,10 +32,13 @@
     # User configuration
     hostname = "netsanet"; # Identify the system for networking tasks
     user = "ananth"; # Login username of primary user
-    name = "Ananth Venkatesh"; # Full name of primary user
+    name = "Ananth"; # Full name of primary user
 
-    # Used for git commits, among other things
-    email = "dev.quantum9innovation@gmail.com";
+    # Git configuration
+    git = {
+      name = "Ananth Venkatesh";
+      email = "dev.quantum9innovation@gmail.com";
+    };
 
     # Import hardware scan (device-specific)
     hardware = import ./hardware-configuration.nix;
