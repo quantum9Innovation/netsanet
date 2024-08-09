@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, quasar, ... }: {
+{ config, pkgs, ... }: {
 
   #  /*****                                                 /******   /****  
   #  |*    |  |*   |    **     ****     **    *****        |*    |  /*    * 
@@ -12,6 +12,8 @@
 
   # This is a set of custom overrides included in my QuasarOS configuration.
   # It is passed into the QuasarOS configuration flake to build my system.
+
+  imports = [];
 
   # Allow the use of unfree packages
   nixpkgs.config.allowUnfree = true;
