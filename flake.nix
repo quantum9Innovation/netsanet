@@ -55,7 +55,7 @@
     };
 
     # System overrides
-    overrides = [ ./overrides.nix ];
+    overrides = [ ];
     homeOverrides = [ ];
 
     # Enforce defaults
