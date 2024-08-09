@@ -42,7 +42,7 @@
 
     # Internationalization properties
     time.zone = "America/Los_Angeles";
-    locale = "es_US.UTF-8";
+    locale = "en_US.UTF-8";
 
     # Power-efficient NVIDIA GPU settings
     graphics = {
