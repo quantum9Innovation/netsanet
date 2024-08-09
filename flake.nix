@@ -60,7 +60,7 @@
 
     # Enforce defaults
     system = "x86_64-linux";
-    kernel = nixpkgs.legacyPackages.x86_64-linux.linuxPackages_zen;
+    kernel = "zen";
     secureboot.enabled = true;
     free = false;
     stateVersion = "24.05";
