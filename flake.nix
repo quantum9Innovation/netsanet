@@ -55,7 +55,7 @@
     };
 
     # System overrides
-    overrides = [ import ./overrides.nix ];
+    overrides = [ ./overrides.nix ];
     homeOverrides = [ ];
 
     # Enforce defaults
