@@ -58,6 +58,14 @@
     overrides = [ ];
     homeOverrides = [ ];
 
+    # Custom packages
+    systemPackages = pkgs: with pkgs; [
+      hello
+    ];
+    homePackages = pkgs: with pkgs; [
+      hello-wayland
+    ];
+
     # Enforce defaults
     system = "x86_64-linux";
     kernel = "zen";
