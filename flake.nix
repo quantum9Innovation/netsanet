@@ -44,7 +44,6 @@
     hardware = import ./hardware-configuration.nix;
 
     # Internationalization properties
-    time.zone = "America/Los_Angeles";
     locale = "en_US.UTF-8";
 
     # Power-efficient NVIDIA GPU settings
