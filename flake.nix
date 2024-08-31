@@ -44,7 +44,7 @@
     hardware = import ./hardware-configuration.nix;
 
     # Internationalization properties
-    locale = "en_US.UTF-8";
+    locale = "es_US.UTF-8";
 
     # Power-efficient NVIDIA GPU settings
     graphics = {
