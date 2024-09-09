@@ -76,6 +76,6 @@
     hyprland.mod = "SUPER";
     audio.jack = false;
 
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-classic;
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
   };
 }
