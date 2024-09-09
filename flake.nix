@@ -28,54 +28,58 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    # User configuration
-    hostname = "netsanet"; # Identify the system for networking tasks
-    user = "ananth"; # Login username of primary user
-    name = "Ananth"; # Full name of primary user
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      # User configuration
+      hostname = "netsanet"; # Identify the system for networking tasks
+      user = "ananth"; # Login username of primary user
+      name = "Ananth"; # Full name of primary user
 
-    # Git configuration
-    git = {
-      name = "Ananth Venkatesh";
-      email = "dev.quantum9innovation@gmail.com";
-    };
-
-    # Import hardware scan (device-specific)
-    hardware = import ./hardware-configuration.nix;
-    hyprland.monitors =
-      [ "DP-1,2560x1440@165,1920x0,auto" "HDMI-A-1,1920x1080@60,0x0,1" ];
-
-    # Internationalization properties
-    locale = "es_US.UTF-8";
-
-    # Power-efficient NVIDIA GPU settings
-    graphics = {
-      opengl = true;
-      nvidia = {
-        enabled = true;
-        intelBusId = "PCI:00:02:0";
-        nvidiaBusId = "PCI:01:00:0";
+      # Git configuration
+      git = {
+        name = "Ananth Venkatesh";
+        email = "dev.quantum9innovation@gmail.com";
       };
+
+      # Import hardware scan (device-specific)
+      hardware = import ./hardware-configuration.nix;
+      hyprland.monitors = [
+        "DP-1,2560x1440@165,1920x0,auto"
+        "HDMI-A-1,1920x1080@60,0x0,1"
+      ];
+
+      # Internationalization properties
+      locale = "es_US.UTF-8";
+
+      # Power-efficient NVIDIA GPU settings
+      graphics = {
+        opengl = true;
+        nvidia = {
+          enabled = true;
+          intelBusId = "PCI:00:02:0";
+          nvidiaBusId = "PCI:01:00:0";
+        };
+      };
+
+      # System overrides
+      overrides = [ ];
+      homeOverrides = [ ];
+
+      # Custom packages
+      systemPackages = pkgs: with pkgs; [ hello ];
+      homePackages = pkgs: with pkgs; [ hello-wayland ];
+
+      # Enforce defaults
+      system = "x86_64-linux";
+      kernel = "zen";
+      secureboot.enabled = true;
+      stateVersion = "24.05";
+      autoLogin = true;
+      ssh.enabled = false;
+      hyprland.mod = "SUPER";
+      audio.jack = false;
+
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     };
-
-    # System overrides
-    overrides = [ ];
-    homeOverrides = [ ];
-
-    # Custom packages
-    systemPackages = pkgs: with pkgs; [ hello ];
-    homePackages = pkgs: with pkgs; [ hello-wayland ];
-
-    # Enforce defaults
-    system = "x86_64-linux";
-    kernel = "zen";
-    secureboot.enabled = true;
-    stateVersion = "24.05";
-    autoLogin = true;
-    ssh.enabled = false;
-    hyprland.mod = "SUPER";
-    audio.jack = false;
-
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-  };
 }
