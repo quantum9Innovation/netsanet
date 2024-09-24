@@ -68,7 +68,7 @@
 
       # Custom packages
       systemPackages = pkgs: with pkgs; [ hello ];
-      homePackages = pkgs: with pkgs; [ hello-wayland ];
+      homePackages = pkgs: with pkgs; [ hello-wayland ollama ];
 
       # Enforce defaults
       system = "x86_64-linux";
