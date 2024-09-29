@@ -68,7 +68,12 @@
 
       # Custom packages
       systemPackages = pkgs: with pkgs; [ hello ];
-      homePackages = pkgs: with pkgs; [ hello-wayland ollama spotube ];
+      homePackages =
+        pkgs: with pkgs; [
+          hello-wayland
+          ollama
+          spotube
+        ];
 
       # Enforce defaults
       system = "x86_64-linux";
