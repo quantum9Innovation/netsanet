@@ -73,6 +73,8 @@
           hello-wayland
           ollama
           spotube
+          proselint
+          nodePackages.cspell
         ];
 
       # Enforce defaults
