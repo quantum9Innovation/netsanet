@@ -29,7 +29,7 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    { nixpkgs, ... }:
     rec {
       # User configuration
       hostname = "netsanet"; # Identify the system for networking tasks
