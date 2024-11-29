@@ -71,7 +71,6 @@
       homePackages =
         pkgs: with pkgs; [
           hello-wayland
-          ollama
           spotube
           proselint
           nodePackages.cspell
