@@ -1,14 +1,14 @@
 {
 
-  #  /*****                                                 /******   /****  
-  #  |*    |  |*   |    **     ****     **    *****        |*    |  /*    * 
-  #  |*    |  |*   |   /* *   /*       /* *   |*   |      |*    |  |*       
-  #  |*    |  |*   |  /*   *   ****   /*   *  |*   /     |*    |   ****** 
-  #  |*  * |  |*   |  ******       |  ******  *****     |*    |         | 
-  #  |*   *   |*   |  |*   |   *   |  |*   |  |*  *    |*    |   *     | 
+  #  /*****                                                 /******   /****
+  #  |*    |  |*   |    **     ****     **    *****        |*    |  /*    *
+  #  |*    |  |*   |   /* *   /*       /* *   |*   |      |*    |  |*
+  #  |*    |  |*   |  /*   *   ****   /*   *  |*   /     |*    |   ******
+  #  |*  * |  |*   |  ******       |  ******  *****     |*    |         |
+  #  |*   *   |*   |  |*   |   *   |  |*   |  |*  *    |*    |   *     |
   #   **** *   ****   |*   |    ****  |*   |  |*   *   ******    *****
   #
-  #  ==========================================================================  
+  #  ==========================================================================
 
   # This is my personal Quasar configuration flake.
   # It is passed into the QuasarOS configuration flake to build my system.
@@ -41,6 +41,9 @@
         name = "Ananth Venkatesh";
         email = "dev.quantum9innovation@gmail.com";
       };
+
+      # Meta configuration
+      flake = "/home/ananth/gh/q9i/nixos";
 
       # Import hardware scan (device-specific)
       hardware = import ./hardware-configuration.nix;
