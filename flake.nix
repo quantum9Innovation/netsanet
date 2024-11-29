@@ -30,7 +30,7 @@
 
   outputs =
     { self, nixpkgs, ... }@inputs:
-    {
+    rec {
       # User configuration
       hostname = "netsanet"; # Identify the system for networking tasks
       user = "ananth"; # Login username of primary user
@@ -43,7 +43,7 @@
       };
 
       # Meta configuration
-      flake = "/home/ananth/gh/q9i/nixos";
+      flake = "/home/${user}/gh/q9i/nixos";
 
       # Import hardware scan (device-specific)
       hardware = import ./hardware-configuration.nix;
