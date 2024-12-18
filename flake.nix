@@ -76,7 +76,7 @@
           hello-wayland
           spotube
           proselint
-          nodePackages.cspell
+          nodePackages_latest.cspell
         ];
 
       # Enforce defaults
