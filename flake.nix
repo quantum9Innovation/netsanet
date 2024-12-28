@@ -79,16 +79,6 @@
           nodePackages_latest.cspell
         ];
 
-      # Enforce defaults
-      system = "x86_64-linux";
-      kernel = "zen";
-      secureboot.enabled = true;
-      stateVersion = "24.05";
-      autoLogin = true;
-      ssh.enabled = false;
-      hyprland.mod = "SUPER";
-      audio.jack = false;
-
       formatter =
         let
           systems = [
