@@ -77,6 +77,7 @@
           spotube
           proselint
           nodePackages_latest.cspell
+          whatsie
         ];
 
       formatter =
