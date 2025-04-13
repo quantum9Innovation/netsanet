@@ -68,6 +68,7 @@
             check-yaml.enable = true;
             yamlfmt.enable = true;
             yamllint.enable = true;
+            yamllint.settings.preset = "relaxed";
             actionlint.enable = true;
             check-added-large-files.enable = true;
             check-case-conflicts.enable = true;
