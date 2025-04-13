@@ -132,14 +132,7 @@
 
       # Custom packages
       systemPackages = pkgs: with pkgs; [ hello ];
-      homePackages =
-        pkgs: with pkgs; [
-          hello-wayland
-          spotube
-          proselint
-          nodePackages_latest.cspell
-          zapzap
-        ];
+      homePackages = pkgs: with pkgs; [ hello-wayland ];
 
       formatter = forAllSystems (_system: nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style);
     };
