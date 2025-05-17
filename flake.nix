@@ -127,6 +127,12 @@
         };
       };
 
+      # Keyboard bindings
+      kmonad = {
+        enabled = true;
+        keyboard = "/dev/input/by-id/usb-DELL_Technologies_Keyboard-event-kbd";
+      };
+
       # System overrides
       overrides = [ ];
       homeOverrides = [ ];
