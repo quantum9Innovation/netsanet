@@ -105,6 +105,7 @@
 
       # Meta configuration
       flake = "/home/${user}/gh/q9i/nixos";
+      secureboot.enabled = false;
 
       # Import hardware scan (device-specific)
       hardware = import ./hardware-configuration.nix;
