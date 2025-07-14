@@ -111,7 +111,7 @@
       hardware = import ./hardware-configuration.nix;
       hyprland.monitors = [
         "eDP-1,2560x1600@60,1920x0,auto"
-        "HDMI-A-1,1920x1080@60,0x0,1"
+        "HDMI-A-1,1920x1080@60,0x0,auto"
       ];
 
       # Internationalization properties
