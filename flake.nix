@@ -110,8 +110,8 @@
       # Import hardware scan (device-specific)
       hardware = import ./hardware-configuration.nix;
       hyprland.monitors = [
-        "DP-1,2560x1440@165,1920x0,auto"
-        "HDMI-A-1,1920x1080@60,0x0,1"
+        "eDP-1,2560x1600@60,1920x0,auto"
+        "HDMI-A-1,preferred,auto,auto"
       ];
 
       # Internationalization properties
