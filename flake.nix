@@ -101,6 +101,10 @@
       git = {
         name = "Ananth Venkatesh";
         email = "dev.quantum9innovation@gmail.com";
+        signing = {
+          enabled = true;
+          key = "~/.ssh/id_ed25519.pub";
+        };
       };
 
       # Meta configuration
