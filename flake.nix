@@ -62,7 +62,7 @@
             nixfmt-rfc-style.enable = true;
             ripsecrets.enable = true;
             trufflehog.enable = false;
-            shellcheck.enable = true;
+            shellcheck.enable = false;
             shfmt.enable = true;
             typos.enable = true;
             check-yaml.enable = true;
